@@ -1,0 +1,802 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+
+:root {
+  --primary-color: rgb(108, 83, 83);
+}
+
+.styleBox {
+  box-shadow: inset 0px 0px 9px -2px rgba(66, 68, 90, 1);
+  background-color: transparent;
+}
+
+.registerPages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.344),
+      rgba(0, 0, 0, 0.294)
+    ),
+    url("./assets//images/registerBg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  .registerContainer {
+    box-shadow: 0px 0px 8px 3px rgba(238, 20, 20, 0.346);
+    border-radius: 30px;
+    background-color: rgba(34, 36, 36, 0.248);
+    padding: 40px;
+    height: 370px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    .titleLogin {
+      text-align: center;
+      font-size: 1.3rem;
+      color: white;
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+    .inputBox {
+      .registerItem {
+        color: white;
+        font-size: 0.7rem;
+        letter-spacing: 2px;
+      }
+      input {
+        width: 230px;
+        background-color: transparent;
+        border-radius: 5px;
+        height: 30px;
+        padding: 5px;
+        // border: 1px solid rgba(137, 125, 125, 0.376);
+        &input:focus {
+          outline: none;
+          border: 1px solid transparent;
+        }
+      }
+      .loginBtn {
+        padding: 5px 10px;
+        background-color: rgba(0, 0, 0, 0.585);
+        border-radius: 5px;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+    }
+    .textLogin {
+      font-size: 9px;
+      letter-spacing: 1px;
+      color: rgba(255, 255, 255, 0.601);
+      margin-top: 5px;
+      margin-bottom: -15px;
+    }
+    .loginOption {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 9px;
+      margin-top: 10px;
+      img {
+        width: 30px;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+// --------------------------- Header Component ---------------------------------
+.header {
+  display: flex;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.223);
+  justify-content: space-between;
+  padding: 9px 30px;
+  .left {
+    // background: red;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    column-gap: 6px;
+    .hamburger {
+      cursor: pointer;
+      padding: 7px 6px;
+      border-radius: 50%;
+      margin-right: 15px;
+      &:hover {
+        background-color: rgba(95, 99, 104, 0.207);
+      }
+    }
+  }
+}
+
+// --------------------------- sidebar ---------------------------------
+.mainPage {
+  display: flex;
+  .sidebar {
+    padding-top: 30px;
+    display: flex;
+    min-width: 230px;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    min-height: 100vh;
+    ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 15px;
+      width: 100%;
+      padding: 0;
+      li {
+        list-style: none;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        a {
+          color: rgba(0, 0, 0, 0.744);
+          width: 100%;
+          padding: 15px 8px;
+          display: block;
+          border-radius: 0px 25px 25px 0px;
+          display: flex;
+          align-items: center;
+          gap: 7px;
+          font-size: 0.8rem;
+          border-left: 2px solid transparent;
+          &:hover {
+            background-color: #e0ffff;
+            border-left: 4px solid #00bfff;
+          }
+          img {
+            width: 20px;
+          }
+        }
+      }
+    }
+  }
+  .sidebar.active {
+    min-width: 70px;
+    border-right: 3px solid #808080;
+    ul {
+      li {
+        a {
+          border-radius: 0px;
+          justify-content: center;
+          div {
+            display: none;
+          }
+          img {
+            width: 25px;
+          }
+        }
+      }
+    }
+  }
+  .pages {
+    padding: 40px;
+    flex-grow: 1;
+    min-width: 270px;
+  }
+}
+
+// --------------------------- sidebar ---------------------------------
+
+.read {
+  justify-content: center;
+  align-items: center;
+  .addBtn {
+    text-align: right;
+    margin-bottom: 15px;
+    margin-right: 5px;
+  }
+  .action,
+  .upload {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      padding: 6px;
+      margin-right: 10px;
+      border-radius: 50%;
+      cursor: pointer;
+      width: 35px;
+      height: 35px;
+      &:hover {
+        background-color: #feefc3;
+      }
+    }
+  }
+}
+
+// --------------------------- Dashboard Pages ---------------------------------
+
+.dashboardPages,
+.fasilitasPages,
+.syahbandar,
+.overviewPages,
+.umumPages,
+.tkpuPages {
+  .title {
+    h1 {
+      font-weight: 300;
+      font-size: 2rem;
+    }
+  }
+}
+
+.dashboardPages {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+  .informasi {
+    background-color: var(--secondary-color);
+    text-align: center;
+    padding: 10px 30px;
+    border-radius: 15px;
+    h1 {
+      font-weight: 400;
+    }
+    .konten {
+      text-align: justify;
+    }
+  }
+  .wrapperItem {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    .item {
+      display: flex;
+      flex: 10%;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      min-height: 200px;
+      text-align: center;
+      border-radius: 15px;
+      min-width: 25%;
+      h3 {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+// --------------------------- Produksi Pages ---------------------------------
+.produksiPages {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  .title {
+    margin-bottom: 30px;
+    // margin-bottom: 30px;
+    h1 {
+      font-weight: 300;
+      font-size: 2rem;
+    }
+  }
+  .wrapperItem {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+
+    .item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: var(--secondary-color);
+      min-height: 200px;
+      min-width: 300px;
+      flex: 1;
+      text-align: center;
+      border-radius: 15px;
+      h4 {
+        font-size: 1.5rem;
+      }
+      h5 {
+        font-size: 1.5rem;
+      }
+      .ikon {
+        &:hover {
+          color: #00bfff;
+        }
+      }
+    }
+  }
+  .grafik {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    width: 100%;
+    .item {
+      // min-width: 350px;
+      min-width: 40%;
+      height: 500px;
+      flex: 1;
+      background-color: var(--secondary-color);
+      border-radius: 10px;
+    }
+  }
+  .logisticComponent {
+    .ikon {
+      &:hover {
+        color: #00bfff;
+      }
+    }
+  }
+  .pelayananComponent {
+    .styleBox {
+      color: black;
+      &:hover {
+        color: #00bfff;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .produksiPages {
+    .grafik {
+      flex-direction: column;
+      .item {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// --------------------------- Produksi > Logistic Component ---------------------------------
+.logisticComponent {
+  text-align: center;
+  margin-top: 100px;
+  h2 {
+    font-weight: 400;
+  }
+  .parents {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    width: 100%;
+    .child {
+      background-color: var(--secondary-color);
+      flex: 1;
+      min-width: 200px;
+      // max-width: 220px;
+      padding: 10px 15px;
+      border-radius: 10px;
+      h3 {
+        font-weight: 400;
+        margin-top: 5px;
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+
+// --------------------------- Produksi > Pelayanan Component ---------------------------------
+.pelayananComponent {
+  text-align: center;
+  margin: auto;
+  width: 100%;
+  h2 {
+    font-weight: 400;
+  }
+  .parents {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    .child {
+      border-radius: 10px;
+      padding: 10px 15px;
+      flex: 1;
+      background-color: var(--secondary-color);
+      h3 {
+        font-weight: 300px;
+        min-width: 250px;
+      }
+    }
+  }
+}
+
+// --------------------------- Syahbandar Pages ---------------------------------
+
+// --------------------------- Syahbandar > Detail Data Components ---------------------------------
+
+.syahbandar {
+  .data {
+    margin-top: 30px;
+    h1 {
+      font-size: 1rem;
+    }
+    .parents {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      width: 100%;
+      .child {
+        background-color: var(--secondary-color);
+        flex: 1;
+        text-align: center;
+        padding: 10px 20px;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
+// --------------------------- Syahbandar > Logboook Components ---------------------------------
+.syahbandar {
+  .logbook {
+    margin-top: 40px;
+    .parents {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      width: 100%;
+      flex-wrap: wrap;
+      .child {
+        height: 500px;
+        flex: 1;
+        min-width: 40%;
+        background-color: var(--secondary-color);
+      }
+    }
+  }
+}
+@media (max-width: 800px) {
+  .syahbandar {
+    .logbook {
+      .parents {
+        flex-direction: column;
+        .child {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+// --------------------------- Syahbandar > Kedatangan, berlayar, tangkapan Components ---------------------------------
+
+.syahbandar {
+  .kedatangan,
+  .berlayar,
+  .tangkapan {
+    margin-top: 40px;
+    h1 {
+      font-weight: 300;
+    }
+    .parents {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      flex-wrap: wrap;
+      gap: 20px;
+      .child {
+        height: 400px;
+        background-color: var(--secondary-color);
+        flex: 1;
+        width: 40%;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .syahbandar {
+    .kedatangan,
+    .berlayar,
+    .tangkapan {
+      .parents {
+        flex-direction: column;
+        .child {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+// --------------------------- Syahbandar > Negara Components ---------------------------------
+
+.syahbandar {
+  .negara {
+    margin-top: 30px;
+    // background-color: red;
+    border: 2px solid black;
+  }
+}
+
+// --------------------------- Fasilitas Pages ---------------------------------
+.fasilitasComponent {
+  margin-top: 20px;
+  .tableContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+    width: 100%;
+    .table {
+      flex: 1;
+      width: 40%;
+    }
+  }
+  .containerKolam {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    .item {
+      background-color: var(--secondary-color);
+      padding: 20px 10px;
+      flex: 1;
+      text-align: center;
+      border-radius: 10px;
+      h1 {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .fasilitasComponent {
+    .tableContainer {
+      flex-direction: column;
+      .table {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// --------------------------- Fasilitas Pages ---------------------------------
+.tkpuComponent {
+  .containerLayanan {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 80px;
+    .item {
+      flex: 1;
+      // width: 40%;
+      min-width: 200px;
+      background-color: var(--secondary-color);
+      text-align: center;
+      padding: 8px 10px;
+      border-radius: 10px;
+      h1 {
+        font-size: 1rem;
+      }
+      .ikon {
+        &:hover {
+          color: #00bfff;
+        }
+      }
+    }
+  }
+  .form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+
+    .item {
+      background-color: var(--secondary-color);
+      padding: 20px 10px;
+      text-align: center;
+      min-width: 200px;
+      border-radius: 15px;
+      .ikon {
+        &:hover {
+          color: #00bfff;
+        }
+      }
+    }
+  }
+  .containerLahan {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    .item {
+      background-color: var(--secondary-color);
+      text-align: center;
+      padding: 20px 20px;
+      border-radius: 10px;
+      h1 {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 595px) {
+  .tkpuComponent {
+    .form {
+      flex-direction: column;
+      gap: 15px;
+      .item {
+        width: 100%;
+      }
+    }
+    .containerLahan {
+      flex-direction: column;
+    }
+  }
+}
+
+// --------------------------- Overview Pages ---------------------------------
+.overviewComponent {
+  margin-top: 50px;
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    flex-wrap: wrap;
+    .item {
+      min-width: 40%;
+      background-color: var(--secondary-color);
+      flex: 1;
+      height: 500px;
+    }
+  }
+  .containerValue {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    .item {
+      background-color: var(--secondary-color);
+      flex: 1;
+      text-align: center;
+      padding: 20px;
+      h1 {
+        font-size: 1.5rem;
+        font-weight: 300;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .overviewComponent {
+    .container {
+      flex-direction: column;
+      .item {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// --------------------------- Overview Pages ---------------------------------
+.umumComponent {
+  margin-top: 40px;
+}
+
+.umumComponent {
+  .logbook {
+    .parents {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      .child {
+        height: 100%;
+        width: 40%;
+
+        .data {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 20px;
+          background-color: var(--secondary-color);
+          padding: 20px 10px;
+          h1 {
+            font-size: 1.4rem;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+}
+
+.umumComponent {
+  .kepegawaian {
+    margin-top: 40px;
+    width: 100%;
+    .parents {
+      display: flex;
+      justify-content: space-between;
+      height: 100%;
+      flex-wrap: wrap;
+      .child {
+        height: 400px;
+        width: 30%;
+      }
+    }
+  }
+}
+@media (max-width: 1200px) {
+  .umumComponent {
+    .logbook {
+      .parents {
+        flex-direction: column;
+        .child {
+          width: 100%;
+        }
+      }
+    }
+    .kepegawaian {
+      margin-top: 50px;
+      .parents {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .child {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.dashboardPages {
+  .item {
+    &:hover {
+      background-color: #e0ffff;
+      color: black;
+    }
+    .ikon {
+      font-size: 40px;
+      &:hover {
+        color: #00bfff;
+      }
+    }
+  }
+}
+
+.dashboardPages {
+  .ikon {
+    font-size: 40px;
+  }
+}
